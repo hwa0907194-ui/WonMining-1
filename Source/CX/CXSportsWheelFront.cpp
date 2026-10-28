@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+﻿// Copyright Epic Games, Inc. All Rights Reserved.
 
 
 #include "CXSportsWheelFront.h"
@@ -10,5 +10,5 @@ UCXSportsWheelFront::UCXSportsWheelFront()
 	FrictionForceMultiplier = 3.0f;
 
 	MaxBrakeTorque = 4500.0f;
-	MaxHandBrakeTorque = 6000.0f;
+	MaxHandBrakeTorque = 4000.0f;
 }

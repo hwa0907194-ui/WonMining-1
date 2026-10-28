@@ -46,6 +46,13 @@ class ACXPawn : public AWheeledVehiclePawn
 	TObjectPtr<UChaosWheeledVehicleMovementComponent> ChaosVehicleMovement;
 
 protected:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Transmission")
+	TObjectPtr<class UCXAutoDownshiftComponent> AutoDownshift;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Engine Sound")
+	TObjectPtr<class UCXEngineAudioComponent> EngineAudio;
+	UPROPERTY(Replicated) uint16 EngineAudioRPM = 900;
+	float EngineAudioElapsed = 0.0f;
+	void UpdateEngineAudio(float DeltaSeconds);
 
 	/** Steering Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
@@ -106,6 +113,7 @@ public:
 
 	virtual void Tick(float Delta) override;
 	virtual void EndPlay(const EEndPlayReason::Type Reason) override;
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 	// End Actor interface
 

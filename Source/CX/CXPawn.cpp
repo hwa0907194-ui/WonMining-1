@@ -17,6 +17,9 @@
 #include "Engine/World.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/DamageType.h"
+#include "CXEngineAudioComponent.h"
+#include "CXAutoDownshiftComponent.h"
+#include "Net/UnrealNetwork.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateVehicle);
 
@@ -60,6 +63,10 @@ ACXPawn::ACXPawn()
 
 	// get the Chaos Wheeled movement component
 	ChaosVehicleMovement = CastChecked<UChaosWheeledVehicleMovementComponent>(GetVehicleMovement());
+	AutoDownshift = CreateDefaultSubobject<UCXAutoDownshiftComponent>(TEXT("Auto Downshift"));
+	EngineAudio = CreateDefaultSubobject<UCXEngineAudioComponent>(TEXT("Engine Audio"));
+	EngineAudio->SetupAttachment(GetMesh());
+	EngineAudio->SetRelativeLocation(FVector(100, 0, 50));
 
 }
 
@@ -125,6 +132,7 @@ void ACXPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputCompon
 void ACXPawn::Tick(float Delta)
 {
 	Super::Tick(Delta);
+	UpdateEngineAudio(Delta);
 	if (HasAuthority() || IsLocallyControlled())
 	{
 		const bool bRaceLocked = !IsRacePlaying();
@@ -258,9 +266,38 @@ void ACXPawn::ResetVehicle(const FInputActionValue& Value)
 
 void ACXPawn::EndPlay(const EEndPlayReason::Type Reason)
 {
+	if (EngineAudio) EngineAudio->Stop();
 	if (AttackInputSubsystem.IsValid() && AttackMapping)
 		AttackInputSubsystem->RemoveMappingContext(AttackMapping);
 	Super::EndPlay(Reason);
+}
+
+void ACXPawn::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME_CONDITION(ACXPawn, EngineAudioRPM, COND_SkipOwner);
+}
+
+void ACXPawn::UpdateEngineAudio(float DeltaSeconds)
+{
+	EngineAudioElapsed += DeltaSeconds;
+	if (EngineAudioElapsed < 0.1f) return;
+	EngineAudioElapsed = 0.0f;
+	const float IdleRPM = FMath::Clamp(ChaosVehicleMovement->EngineSetup.EngineIdleRPM, 400.0f, 20000.0f);
+	const float MaxRPM = FMath::Max(IdleRPM + 1, ChaosVehicleMovement->EngineSetup.MaxRPM);
+	float RPM = EngineAudioRPM;
+	if (HasAuthority() || IsLocallyControlled())
+	{
+		const float PhysicsRPM = ChaosVehicleMovement->GetEngineRotationSpeed();
+		RPM = FMath::IsFinite(PhysicsRPM) ? FMath::Clamp(PhysicsRPM, IdleRPM, 20000.0f) : IdleRPM;
+		if (HasAuthority()) EngineAudioRPM = static_cast<uint16>(FMath::RoundToInt(RPM));
+	}
+	if (GetNetMode() == NM_DedicatedServer) return;
+	// Remote cars use authoritative RPM. Their load is approximated from RPM;
+	// the locally driven car responds to the actual throttle input as well.
+	const float Load = IsLocallyControlled() ? FMath::Abs(ChaosVehicleMovement->GetThrottleInput())
+		: FMath::Clamp((RPM - IdleRPM) / (MaxRPM - IdleRPM), 0.0f, 1.0f);
+	EngineAudio->SetEngineParameters(FMath::Max(RPM, IdleRPM), Load);
 }
 
 bool ACXPawn::IsRacePlaying() const

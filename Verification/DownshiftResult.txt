@@ -1,0 +1,9 @@
+Speed-based automatic downshift - 2026-10-28
+PASS - CXEditor Win64 Development build.
+PASS - 4 automation tests (engine sound, economy, shop/persistence/address, downshift math).
+Downshift coverage: RPM units, standstill, multi-gear drop, high speed over-rev rejection, actual RPM guard, changed redline, speed/gear matrix, invalid data, custom six-speed ratios/final drive.
+PASS - Live Chaos vehicle: hold highest gear, assist requests first gear, timed physical shift actually completes at standstill.
+Contact uses actual driven wheel contact data, not the unsupported navigation ground query.
+A pending assisted shift keeps physics awake briefly; normal tick/sleep behavior resumes afterward.
+Manual/reverse, handbrake/drift/air and shift cooldown guards are implemented; exhaustive driving feel and network-condition testing of this new feature were not performed.
+No deployment package built. Existing vehicle tuning values were not changed.

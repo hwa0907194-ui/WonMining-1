@@ -1,0 +1,9 @@
+Engine audio verification - 2026-10-28
+PASS - CXEditor Win64 Development build.
+PASS - 3 automation tests: economy/validation, shop/save/address, engine synthesis.
+PASS - Synth output finite and bounded; increased RPM raises frequency; mute fades to silence; invalid inputs handled.
+PASS - Editor game mode audio device initialized and live vehicle synth reported playing.
+PASS - 8-second mono 48 kHz/16-bit WAV preview generated using the runtime synthesis algorithm.
+Speaker listening and subjective engine tone quality were not evaluated.
+User requested no deployment build. Deployment work stopped; CX-Windows contains an intermediate incompatible package and requires a full recook before future use.
+Engine audio feature is verified in the editor project; use CX/CX.uproject.

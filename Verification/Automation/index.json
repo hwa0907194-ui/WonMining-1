@@ -2,8 +2,8 @@
 	"devices": [
 		{
 			"deviceName": "LYB",
-			"instance": "551FCC6B446830A1C7A1FDA26E07AEFE",
-			"instanceName": "LYB-3100",
+			"instance": "9D9ACEB74B07BEAD77ACFEAAB88F97DB",
+			"instanceName": "LYB-1716",
 			"platform": "WindowsEditor",
 			"oSVersion": "Windows 11 (25H2) [10.0.26200.9711] ",
 			"model": "Default",
@@ -15,25 +15,39 @@
 			"appInstanceLog": ""
 		}
 	],
-	"reportCreatedOn": "2026.10.27-23.49.38",
-	"succeeded": 2,
+	"reportCreatedOn": "2026.10.28-05.05.32",
+	"succeeded": 4,
 	"succeededWithWarnings": 0,
 	"failed": 0,
 	"notRun": 0,
 	"inProcess": 0,
-	"totalDuration": 0.027646299451589584,
+	"totalDuration": 0.055355105549097061,
 	"comparisonExported": false,
 	"comparisonExportDirectory": "",
 	"tests": [
+		{
+			"testDisplayName": "EngineSynthesis",
+			"fullTestPath": "CX.Audio.EngineSynthesis",
+			"state": "Success",
+			"deviceInstance": [
+				"9D9ACEB74B07BEAD77ACFEAAB88F97DB"
+			],
+			"duration": 0.014991901814937592,
+			"dateTime": "2026.10.28-05.05.32",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
 		{
 			"testDisplayName": "ShopPersistenceAddress",
 			"fullTestPath": "CX.Extended.ShopPersistenceAddress",
 			"state": "Success",
 			"deviceInstance": [
-				"551FCC6B446830A1C7A1FDA26E07AEFE"
+				"9D9ACEB74B07BEAD77ACFEAAB88F97DB"
 			],
-			"duration": 0.011086400598287582,
-			"dateTime": "2026.10.27-23.49.38",
+			"duration": 0.0091597996652126312,
+			"dateTime": "2026.10.28-05.05.32",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -44,10 +58,24 @@
 			"fullTestPath": "CX.PlayerState.Validation",
 			"state": "Success",
 			"deviceInstance": [
-				"551FCC6B446830A1C7A1FDA26E07AEFE"
+				"9D9ACEB74B07BEAD77ACFEAAB88F97DB"
 			],
-			"duration": 0.016559898853302002,
-			"dateTime": "2026.10.27-23.49.38",
+			"duration": 0.016687702387571335,
+			"dateTime": "2026.10.28-05.05.32",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Downshift",
+			"fullTestPath": "CX.Vehicle.Downshift",
+			"state": "Success",
+			"deviceInstance": [
+				"9D9ACEB74B07BEAD77ACFEAAB88F97DB"
+			],
+			"duration": 0.014515701681375504,
+			"dateTime": "2026.10.28-05.05.32",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,

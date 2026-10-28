@@ -1,0 +1,5 @@
+PASS - Game target compile and link.
+PASS - Windows packaging; packaged game binary hash matches new build.
+Scope: sports rear wheel friction 3.0, side slip modifier 0.55, handbrake torque 8000 Nm.
+No driving feel validation performed. These are initial tuning values.
+Open editor was not closed or modified; editor restart and CXEditor build required for native constructor defaults.

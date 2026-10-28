@@ -1,0 +1,43 @@
+﻿{
+	"devices": [
+		{
+			"deviceName": "LYB",
+			"instance": "D3B8E19D4F55BF034B02868576A5AAF7",
+			"instanceName": "LYB-39892",
+			"platform": "WindowsEditor",
+			"oSVersion": "Windows 11 (25H2) [10.0.26200.9711] ",
+			"model": "Default",
+			"gPU": "NVIDIA GeForce RTX 4070 Ti SUPER",
+			"cPUModel": "AMD Ryzen 7 7800X3D 8-Core Processor           ",
+			"rAMInGB": 32,
+			"renderMode": "SM6",
+			"rHI": "",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.10.28-05.10.37",
+	"succeeded": 1,
+	"succeededWithWarnings": 0,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 1.1819758415222168,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "",
+	"tests": [
+		{
+			"testDisplayName": "Downshift",
+			"fullTestPath": "CX.Vehicle.Downshift",
+			"state": "Success",
+			"deviceInstance": [
+				"D3B8E19D4F55BF034B02868576A5AAF7"
+			],
+			"duration": 1.1819758415222168,
+			"dateTime": "2026.10.28-05.10.35",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		}
+	]
+}

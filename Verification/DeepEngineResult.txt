@@ -1,0 +1,9 @@
+Deep engine sound verification - 2026-10-28
+PASS - CXEditor build.
+PASS - All 3 automation tests.
+PASS - Low exhaust energy dominates upper harmonic; high RPM still has the expected firing tone.
+PASS - Finite bounded signal, mute fade and invalid input handling.
+PASS - Live editor game audio device/vehicle synth playback test.
+Preview: AudioPreview/engine-preview-deep.wav (mono, 48000 Hz, 16-bit, 8 seconds).
+No deployment build performed. Vehicle tuning and cylinder count were not edited.
+Subjective speaker listening was not performed.
