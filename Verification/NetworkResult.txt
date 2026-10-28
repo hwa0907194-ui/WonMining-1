@@ -1,0 +1,2 @@
+Client 1: PASS - both chat messages received; own coins=100, bonus=10; peer private values=0; client mutation rejected.
+Client 2: PASS - both chat messages received; own coins=100, bonus=10; peer private values=0; client mutation rejected.

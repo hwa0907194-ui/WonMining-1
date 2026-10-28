@@ -1,0 +1,1 @@
+PASS: Packaged listen server and remote client were stopped and restarted. Remote reconnect credential restored coins=73 and bonus speed=20 from disk. Test data isolated from normal saves.

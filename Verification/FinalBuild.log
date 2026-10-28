@@ -1,0 +1,77 @@
+Log started at 10/27/2026 20:41:12 (2026-10-27T11:41:12Z)
+Resolved project argument C:\Users\hwa09\Documents\Codex\2026-10-27\w\outputs\CX\CX.uproject to C:\Users\hwa09\Documents\Codex\2026-10-27\w\outputs\CX\CX.uproject
+No config file at C:\ProgramData\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+No config file at C:\Users\hwa09\AppData\Local\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+No config file at C:\Users\hwa09\OneDrive\문서\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Configuration will be read from:
+  C:\Users\hwa09\AppData\Roaming\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Reading configuration file from cache (C:\Users\hwa09\Documents\Codex\2026-10-27\w\outputs\CX\Intermediate\Build\XmlConfigCache.bin): C:\Users\hwa09\AppData\Roaming\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Reading configuration file from cache (C:\Users\hwa09\Documents\Codex\2026-10-27\w\outputs\CX\Intermediate\Build\XmlConfigCache.bin): C:\Users\hwa09\Documents\Codex\2026-10-27\w\outputs\CX\Saved\UnrealBuildTool\BuildConfiguration.xml
+Reading configuration file from cache (C:\Users\hwa09\Documents\Codex\2026-10-27\w\outputs\CX\Intermediate\Build\XmlConfigCache.bin): C:\Users\hwa09\AppData\Local\UnrealEngine\Intermediate\Build\UnrealBuildTool.Env.BuildConfiguration.xml
+Setting temp directory to 'C:\Users\hwa09\AppData\Local\Temp\UnrealBuildTool\12c8af0c'
+    Registering build platform: UnrealBuildTool.AndroidPlatformFactory
+    Registering build platform: UnrealBuildTool.IOSPlatformFactory
+    Registering build platform: UnrealBuildTool.LinuxPlatformFactory
+    Registering build platform: UnrealBuildTool.MacPlatformFactory
+    Registering build platform: UnrealBuildTool.TVOSPlatformFactory
+    Registering build platform: UnrealBuildTool.WindowsPlatformFactory
+Found Windows 10 SDK root at C:\Program Files\Windows Kits\10 (1)
+Found Windows 10 SDK root at C:\Program Files (x86)\Windows Kits\10 (2)
+Found Windows 10 SDK version 10.0.26100.0 at C:\Program Files (x86)\Windows Kits\10
+Found Universal CRT version 10.0.26100.0 at C:\Program Files (x86)\Windows Kits\10
+Found Windows 10 SDK version 10.0.28000.0 at C:\Program Files (x86)\Windows Kits\10
+Found Universal CRT version 10.0.28000.0 at C:\Program Files (x86)\Windows Kits\10
+Win64 Installed SDK(s): MinVersion_Sdk=10.0.19041.0, MaxVersion_Sdk=10.9.99999.0, CurrentVersion_Sdk=10.0.28000.0, Version_AutoSdk=10.0.22621.0, CurrentVersion_AutoSdk=
+        Registering build platform: Win64 - buildable: True
+    Registering build platform: UnrealBuildTool.VisionOSPlatformFactory
+Command line: "C:\Program Files\Epic Games\UE_5.6\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" CXEditor Win64 Development -Project=C:\Users\hwa09\Documents\Codex\2026-10-27\w\outputs\CX\CX.uproject -WaitMutex -NoHotReloadFromIDE
+Log file: C:\Users\hwa09\AppData\Local\UnrealBuildTool\Log.txt
+Deleting old log file: C:\Users\hwa09\AppData\Local\UnrealBuildTool\Log-backup-2026.08.10-01.36.57.txt
+
+Generated code is up to date.
+CXGameplaySmokeTest.cpp: Prerequisite C:\Users\hwa09\Documents\Codex\2026-10-27\w\outputs\CX\Source\CX\Tests\CXGameplaySmokeTest.cpp is newer than the last execution of the action: 10/27/2026 20:41:07 vs 10/27/2026 20:38:09
+CXPickup.cpp: Prerequisite C:\Users\hwa09\Documents\Codex\2026-10-27\w\outputs\CX\Source\CX\CXPickup.cpp is newer than the last execution of the action: 10/27/2026 20:41:07 vs 10/27/2026 20:33:55
+CXPickupSpawner.cpp: Prerequisite C:\Users\hwa09\Documents\Codex\2026-10-27\w\outputs\CX\Source\CX\CXPickupSpawner.cpp is newer than the last execution of the action: 10/27/2026 20:40:09 vs 10/27/2026 20:33:56
+UnrealEditor-CX.lib: Prerequisite CXGameplaySmokeTest.cpp is produced by outdated action.
+UnrealEditor-CX.dll: Prerequisite CXGameplaySmokeTest.cpp is produced by outdated action.
+CXEditor.target: Prerequisite UnrealEditor-CX.dll is produced by outdated action.
+Deleting outdated item: C:\Users\hwa09\Documents\Codex\2026-10-27\w\outputs\CX\Binaries\Win64\UnrealEditor-CX.pdb
+Deleting outdated item: C:\Users\hwa09\Documents\Codex\2026-10-27\w\outputs\CX\Intermediate\Build\Win64\x64\UnrealEditor\Development\CX\UnrealEditor-CX.lib
+Building CXEditor...
+Using Visual Studio 2022 14.44.35228 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207) and Windows 10.0.28000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+Warning: Visual Studio 2022 compiler is not a preferred version
+[Upgrade]
+[Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5
+[Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_6;' in CXEditor.Target.cs.
+[Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[Upgrade]
+[Adaptive Build] Excluded from CX unity file: CX.cpp, CXChatWidget.cpp, CXGameMode.cpp, CXGameState.cpp, CXOffroadCar.cpp, CXOffroadWheelFront.cpp, CXOffroadWheelRear.cpp, CXPawn.cpp, CXPickup.cpp, CXPickupSpawner.cpp, CXPlayerController.cpp, CXPlayerState.cpp, CXSportsCar.cpp, CXSportsWheelFront.cpp, CXSportsWheelRear.cpp, CXUI.cpp, CXWheelFront.cpp, CXWheelRear.cpp, CXGameplaySmokeTest.cpp, CXNetworkSmokeTest.cpp, CXPlayerStateTests.cpp
+Executing up to 2 actions based on MaxProcessorCount override
+Using Parallel executor to run 6 action(s)
+------ Building 6 action(s) started ------
+[1/6] Compile [x64] CXPickup.cpp
+[2/6] Compile [x64] CXGameplaySmokeTest.cpp
+[3/6] Compile [x64] CXPickupSpawner.cpp
+[4/6] Link [x64] UnrealEditor-CX.lib
+   C:/Users/hwa09/Documents/Codex/2026-10-27/w/outputs/CX/Intermediate/Build/Win64/x64/UnrealEditor/Development/CX/UnrealEditor-CX.lib ���̺귯�� �� C:/Users/hwa09/Documents/Codex/2026-10-27/w/outputs/CX/Intermediate/Build/Win64/x64/UnrealEditor/Development/CX/UnrealEditor-CX.exp ��ü�� �����ϰ� �ֽ��ϴ�.
+[5/6] Link [x64] UnrealEditor-CX.dll
+[6/6] WriteMetadata CXEditor.target
+Total time in Parallel executor: 2.56 seconds
+WriteFileIfChanged() wrote 0 changed files of 1 requested writes.
+
+Timeline:
+[  0.000]  +0.331 Main
+   0.071          [  0.070]  +0.107 Apply XmlConfig
+   0.227          [  0.226]  +0.103 RegisterPlatforms
+[  0.331]  +3.106 BuildMode
+   0.388          [  0.056]  +0.346 Creating MakeFile for CXEditor
+   0.739          [  0.407]  +0.068 Preparing ActionGraph
+   0.810          [  0.478]  +2.574 Executing ActionGraph
+   3.385          [  3.053]  +0.000 Deploying targets
+   3.385          [  3.053]  +0.052 Saving caches
+[  3.439]  +0.000 TelemetryService.FlushEvents
+[  3.439]
+
+Result: Succeeded
+Total execution time: 3.44 seconds

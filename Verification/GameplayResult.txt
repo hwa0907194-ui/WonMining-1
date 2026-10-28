@@ -1,0 +1,3 @@
+Server: PASS - authoritative line trace, five-coin transfer, attack cooldown, victim under five, coin +10, speed +10, two-second respawn, finished-state guards.
+Client 1: PASS - Waiting/Playing/Finished, replicated items without duplicates, private peer economy, two joint winners, local result UI.
+Client 2: PASS - Waiting/Playing/Finished, replicated items without duplicates, private peer economy, two joint winners, local result UI.

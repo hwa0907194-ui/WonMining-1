@@ -1,0 +1,1 @@
+PASS: Two packaged Windows game instances. Host room created through UI, LAN quick match found and joined it without typing an IP, both ready states replicated, leader started countdown through UI.

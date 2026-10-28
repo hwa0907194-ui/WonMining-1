@@ -1,0 +1,3 @@
+Server: PASS - unready start rejected; only leader can start; shop blocked outside play; atomic purchase and cooldown; physical speed cap measured 120 to 130 km/h; automatic return to lobby and second round; balances retained and 21 pickups reset.
+Client 1: PASS - 80ms packet lag, 2 percent packet loss, second round replicated and other player economy private.
+Client 2: PASS - 80ms packet lag, 2 percent packet loss, second round replicated and other player economy private.

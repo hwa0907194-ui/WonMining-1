@@ -1,0 +1,32 @@
+Code cleanup verification - 2026-10-28
+Editor build: PASS
+Automation: 2 passed, 0 failed
+
+Gameplay integration (dedicated server + two clients):
+[2026.10.27-23.49.51:913][426]LogTemp: Display: CX_GAMEPLAY_WAITING_OVERLAP PASS
+[2026.10.27-23.49.52:875][447]LogTemp: Display: CX_GAMEPLAY_TRACE PASS cooldown=1 attacker=5 victim=5
+[2026.10.27-23.49.53:879][469]LogTemp: Display: CX_GAMEPLAY_UNDER_FIVE PASS
+[2026.10.27-23.49.53:879][469]LogTemp: Display: CX_GAMEPLAY_PICKUPS PASS coins=15 bonus=10.0
+[2026.10.27-23.49.56:212][520]LogTemp: Display: CX_GAMEPLAY_RESPAWN PASS
+[2026.10.27-23.50.14:896][929]LogTemp: Display: CX_GAMEPLAY_FINISHED_GUARDS PASS
+[2026.10.27-23.50.16:372][165]LogTemp: Display: CX_GAMEPLAY_CLIENT PASS items=22 peers=1 winners=2 coins=15
+[2026.10.27-23.50.14:867][134]LogTemp: Display: CX_GAMEPLAY_CLIENT PASS items=22 peers=1 winners=2 coins=15
+
+Lobby/shop/rematch integration (two clients, 80 ms lag / 2 percent packet loss):
+[2026.10.27-23.51.31:528][728]LogTemp: Display: CX_EXT_UNREADY PASS
+[2026.10.27-23.51.35:556][816]LogTemp: Display: CX_EXT_READY_START PASS permission=1 shop_guard=1
+[2026.10.27-23.51.38:588][882]LogTemp: Display: CX_EXT_SHOP PASS
+[2026.10.27-23.51.38:588][882]LogTemp: Display: CX_EXT_SPEED_LIMIT PASS before=120.0 after=130.0
+[2026.10.27-23.51.48:565][100]LogTemp: Display: CX_EXT_REMATCH PASS items=21
+[2026.10.27-23.51.52:567][886]LogTemp: Display: CX_EXT_CLIENT PASS phase=1
+[2026.10.27-23.51.51:468][373]LogTemp: Display: CX_EXT_CLIENT PASS phase=1
+
+Vehicle tuning source files unchanged (hash comparison against pre-cleanup backup).
+No FPS or memory benchmark performed; no percentage speedup claim.
+
+Windows Development package: PASS - BUILD SUCCESSFUL, ExitCode=0
+Packaged restart persistence (isolated test save):
+[2026.10.27-23.52.55:539][955]LogTemp: Display: CX_SAVE_SEED PASS
+[2026.10.27-23.53.20:487][956]LogTemp: Display: CX_SAVE_RECONNECT PASS coins=73 bonus=20.0
+PASS - Restoring the same profile did not rewrite the server save file (LastWriteTimeUtc unchanged).
+All owned test game/server/client processes stopped.
